@@ -2,6 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import Products from "../components/Products";
@@ -20,8 +21,12 @@ const Filter = styled.div`
 const FilterText = styled.span`
 	font-size: 20px;
 	font-weight: 600;
+	margin-right: 20px;
 `;
-const Select = styled.select``;
+const Select = styled.select`
+	padding: 10px;
+	margin-right: 20px;
+`;
 const Option = styled.option``;
 
 const ProductList = () => {
@@ -29,6 +34,7 @@ const ProductList = () => {
 		<Container>
 			<Announcement></Announcement>
 			<Navbar></Navbar>
+			<Footer></Footer>
 
 			<Title>Items</Title>
 			<FilterContainer>
@@ -55,6 +61,11 @@ const ProductList = () => {
 						<Option>$15</Option>
 						<Option>$4</Option>
 						<Option>$2</Option>
+					</Select>
+					<Select>
+						<Option selected>Newest</Option>
+						<Option>Price (asc)</Option>
+						<Option>Price (desc)</Option>
 					</Select>
 				</Filter>
 				<Filter>
